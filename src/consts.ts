@@ -8,7 +8,7 @@ export const SITE: Site = {
   author: 'Columbia DSA',
   locale: 'en-US',
   featuredPostCount: 2,
-  postsPerPage: 3,
+  postsPerPage: 10,
 }
 
 export const NAV_LINKS: SocialLink[] = [
@@ -58,6 +58,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     href: 'https://discordapp.com',
     label: 'Discord',
+  },
+  {
+    href: '/rss.xml',
+    label: 'RSS',
   },
 ]
 

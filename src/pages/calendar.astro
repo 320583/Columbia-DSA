@@ -11,21 +11,34 @@ import Breadcrumbs from '@/components/breadcrumbs.astro'
   <div class="relative min-h-[600px] overflow-hidden rounded-[20px] bg-white shadow-sm dark:bg-slate-950/70">
     <div
       id="calendar-loader"
-      class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/80 text-center text-slate-100 backdrop-blur-sm"
+      class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/80 dark:bg-slate-950/80 text-center backdrop-blur-sm"
     >
-      <div class="flex h-12 w-12 items-center justify-center rounded-full border-4 border-white/25 border-t-white animate-spin" />
-      <p class="mt-4 text-sm text-slate-100">Loading calendar…</p>
+      <div class="flex h-12 w-12 items-center justify-center rounded-full border-4 border-slate-950/25 dark:border-white/25 border-t-slate-950 dark:border-t-white animate-spin" />
+      <p class="mt-4 text-sm text-slate-950 dark:text-slate-100">Loading calendar…</p>
     </div>
 
-    <iframe
-      src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FNew_York&amp;src=dsaofcolumbia%40gmail.com&amp;mode=AGENDA&amp;color=%23a79b8e"
-      class="w-full min-h-[600px] bg-white filter transition duration-300 dark:invert dark:hue-rotate-[180deg] dark:saturate-[1.1] dark:contrast-[0.9]"
-      style="border-radius: 20px;"
-      width="100%"
-      height="600"
-      frameborder="0"
-      scrolling="no"
-      onload="document.getElementById('calendar-loader').style.display='none'"
-    ></iframe>
+    <div id="calendar-container"></div>
   </div>
+
+  <script>
+    const isMobile = window.innerWidth < 768
+    const mode = isMobile ? 'AGENDA' : 'MONTH'
+    const src = `https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&src=dsaofcolumbia%40gmail.com&mode=${mode}&color=%23a79b8e`
+
+    const iframe = document.createElement('iframe')
+    iframe.src = src
+    iframe.className = 'w-full min-h-[600px] bg-white filter transition duration-300 dark:invert dark:hue-rotate-[180deg] dark:saturate-[1.1] dark:contrast-[0.9]'
+    iframe.style.borderRadius = '20px'
+    iframe.width = '100%'
+    iframe.height = '600'
+    iframe.frameBorder = '0'
+    iframe.scrolling = 'no'
+    iframe.onload = () => {
+      const loader = document.getElementById('calendar-loader')
+      if (loader) loader.style.display = 'none'
+    }
+
+    const container = document.getElementById('calendar-container')
+    if (container) container.appendChild(iframe)
+  </script>
 </Layout>
