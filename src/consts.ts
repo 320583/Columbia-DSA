@@ -70,5 +70,5 @@ export const ICON_MAP: IconMap = {
   RSS: 'lucide:rss',
   Instagram: 'lucide:instagram',
   Facebook: 'lucide:facebook',
-  Discord: 'lucide:message-circle-question',
+  Discord: 'lucide:message-circle',
 }
