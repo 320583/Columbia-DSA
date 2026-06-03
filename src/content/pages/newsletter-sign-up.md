@@ -1,4 +1,7 @@
-# Newsletter
+---
+title: 'Newsletter Sign Up'
+description: 'Stay connected with Columbia DSA by joining our newsletter for event updates and organizing opportunities.'
+---
 
 This is all filler copy.
 

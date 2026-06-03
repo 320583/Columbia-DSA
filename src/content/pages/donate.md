@@ -1,4 +1,7 @@
-# Donate
+---
+title: 'Donate'
+description: 'Support Columbia DSA through donations to fund organizing and community events.'
+---
 
 This is all filler copy.
 
