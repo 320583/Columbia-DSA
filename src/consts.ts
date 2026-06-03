@@ -13,32 +13,32 @@ export const SITE: Site = {
 
 export const NAV_LINKS: SocialLink[] = [
   {
-    href: '/blog',
-    label: 'Blog',
+    href: '/',
+    label: 'Home',
   },
   {
-    href: '/about',
-    label: 'About',
+    href: '/blog',
+    label: 'News',
   },
   {
     href: '/calendar',
     label: 'Calendar',
   },
   {
-    href: '/contact',
-    label: 'Contact',
-  },
-  {
     href: '/resources',
     label: 'Resources',
   },
   {
-    href: '/social-media',
-    label: 'Social Media',
-  },
-  {
     href: 'https://shop.worxprinting.coop/collections/dsa-columbia',
     label: 'Shop',
+  },
+  {
+    href: '/donate',
+    label: 'Donate',
+  },
+  {
+    href: '/contact',
+    label: 'Contact Us',
   },
 ]
 

@@ -1,0 +1,15 @@
+---
+import Breadcrumbs from '@/components/breadcrumbs.astro'
+import Content from '@/content/pages/newsletter-sign-up.md'
+import Layout from '@/layouts/layout.astro'
+import PageHead from '@/components/page-head.astro'
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="Newsletter" />
+  <Breadcrumbs items={[{ href: '/newsletter-sign-up', label: 'Newsletter', icon: 'lucide:mail' }]} />
+
+  <section class="prose">
+    <Content />
+  </section>
+</Layout>
