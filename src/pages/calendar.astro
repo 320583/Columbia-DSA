@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/breadcrumbs.astro'
   <PageHead slot="head" title="Calendar" />
   <Breadcrumbs items={[{ label: 'Calendar', icon: 'lucide:calendar' }]} />
 
-  <div class="relative min-h-[600px] overflow-hidden rounded-[20px] bg-white shadow-sm">
+  <div class="relative min-h-[600px] overflow-hidden rounded-[20px] bg-white shadow-sm dark:bg-slate-950/70">
     <div
       id="calendar-loader"
       class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/80 text-center text-slate-100 backdrop-blur-sm"
@@ -19,8 +19,8 @@ import Breadcrumbs from '@/components/breadcrumbs.astro'
 
     <iframe
       src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FNew_York&amp;src=dsaofcolumbia%40gmail.com&amp;mode=AGENDA&amp;color=%23a79b8e"
-      class="w-full min-h-[600px] bg-white"
-      style="border-radius: 20px; background-color: white;"
+      class="w-full min-h-[600px] bg-white filter transition duration-300 dark:invert dark:hue-rotate-[180deg] dark:saturate-[1.1] dark:contrast-[0.9]"
+      style="border-radius: 20px;"
       width="100%"
       height="600"
       frameborder="0"
