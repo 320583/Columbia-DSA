@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/layout.astro'
+import PageHead from '@/components/page-head.astro'
+import Breadcrumbs from '@/components/breadcrumbs.astro'
+import Content from '@/content/pages/contact.md'
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="Contact" />
+  <Breadcrumbs items={[{ label: 'Contact', icon: 'lucide:mail' }]} />
+
+  <div class="prose">
+    <Content />
+  </div>
+</Layout>

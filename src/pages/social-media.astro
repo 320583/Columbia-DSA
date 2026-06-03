@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/layout.astro'
+import PageHead from '@/components/page-head.astro'
+import Breadcrumbs from '@/components/breadcrumbs.astro'
+import Content from '@/content/pages/social-media.md'
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="Social Media" />
+  <Breadcrumbs items={[{ label: 'Social Media', icon: 'lucide:share-2' }]} />
+
+  <div class="prose">
+    <Content />
+  </div>
+</Layout>

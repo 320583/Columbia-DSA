@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/layout.astro'
+import PageHead from '@/components/page-head.astro'
+import Breadcrumbs from '@/components/breadcrumbs.astro'
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="Calendar" />
+  <Breadcrumbs items={[{ label: 'Calendar', icon: 'lucide:calendar' }]} />
+
+  <div class="relative min-h-[600px] overflow-hidden rounded-[20px] bg-white shadow-sm">
+    <div
+      id="calendar-loader"
+      class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/80 text-center text-slate-100 backdrop-blur-sm"
+    >
+      <div class="flex h-12 w-12 items-center justify-center rounded-full border-4 border-white/25 border-t-white animate-spin" />
+      <p class="mt-4 text-sm text-slate-100">Loading calendar…</p>
+    </div>
+
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FNew_York&amp;src=dsaofcolumbia%40gmail.com&amp;mode=AGENDA&amp;color=%23a79b8e"
+      class="w-full min-h-[600px] bg-white"
+      style="border-radius: 20px; background-color: white;"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+      onload="document.getElementById('calendar-loader').style.display='none'"
+    ></iframe>
+  </div>
+</Layout>
