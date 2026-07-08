@@ -4,6 +4,7 @@ description: "Chris Rabb defeated an establishment-backed opponent and another s
 date: 2026-05-22
 tags: ['electoral', 'organizing', 'labor']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 **There's a new DSA member in Congress!** In Pennsylvania, Chris Rabb defeated an establishment-backed opponent and another secretly funded by AIPAC. **Now Congressman Rabb will continue the fight to abolish ICE, free Palestine and win Medicare for All in the U.S. House of Representatives!**

@@ -4,6 +4,7 @@ description: 'Over 170 DSA chapters participated in May Day actions across the c
 date: 2026-05-14
 tags: ['npc-newsletter', 'labor', 'organizing']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 Enjoy your May National Political Committee (NPC) newsletter! Our NPC is an elected 27-person body (including both YDSA Co-Chairs) which functions as the board of directors of DSA. This month, check out May Day actions across the country, apply for our summer conference, sign up for organizing classes, and more!

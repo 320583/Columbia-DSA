@@ -4,6 +4,7 @@ description: 'Tax Day 2026 highlights how our taxes fund endless war and ICE bru
 date: 2026-04-16
 tags: ['npc-newsletter', 'organizing', 'international']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 Enjoy your April National Political Committee (NPC) newsletter! Our NPC is an elected 27-person body (including both YDSA Co-Chairs) that functions as the board of directors of DSA. This month, sign the May Day pledge, learn organizing skills, hear about our summer conference, and more!

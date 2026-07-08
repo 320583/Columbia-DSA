@@ -4,6 +4,7 @@ description: 'Twin Cities DSA leads the fight against ICE with mass actions, whi
 date: 2026-03-12
 tags: ['npc-newsletter', 'ice', 'international']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 Enjoy your March National Political Committee (NPC) newsletter! Our NPC is an elected 27-person body (including both YDSA Co-Chairs) which functions as the board of directors of DSA. This month, find out how chapters are melting ICE and improving their communities, stand against war, get involved with DSA labor work, and more!

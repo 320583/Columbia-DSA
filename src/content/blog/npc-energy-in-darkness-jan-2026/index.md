@@ -4,6 +4,7 @@ description: "DSA celebrates Zohran Mamdani's inauguration as NYC mayor while or
 date: 2026-01-15
 tags: ['npc-newsletter', 'ice', 'international']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 Enjoy your January National Political Committee (NPC) newsletter! Our NPC is an elected 27-person body (including both YDSA Co-Chairs) which functions as the board of directors of DSA. This month, melting ICE, standing against militarism, volunteer opportunities, and more!

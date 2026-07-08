@@ -4,6 +4,7 @@ description: "DSA reaches over 100,000 members strong as chapters organize again
 date: 2026-02-12
 tags: ['npc-newsletter', 'membership', 'ice']
 authors: ['columbia-dsa']
+image: './banner.jpg'
 ---
 
 Enjoy your February National Political Committee (NPC) newsletter! Our NPC is an elected 27-person body (including both YDSA Co-Chairs) which functions as the board of directors of DSA. This month, sign up for know your rights training, help melt ICE, join political education classes, and more!
