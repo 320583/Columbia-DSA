@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 
+
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 // CONSTRUCTION-TEMP: Uncomment when site is ready for indexing
