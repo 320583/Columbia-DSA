@@ -13,8 +13,8 @@ import '@/styles/global.css'
     <style>
       /* CONSTRUCTION-TEMP: All styles in this file are part of the easter egg */
       body {
-        background: #ff00ff;
-        background-image: url('https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif');
+        background: #cc0000;
+        background-image: url('https://media.tenor.com/r19Pycuc6tAAAAAM/marx-karl-marx.gif');
         background-size: 200px;
         font-family: 'Comic Sans MS', cursive;
         color: #00ff00;
@@ -182,6 +182,48 @@ import '@/styles/global.css'
         max-width: 100px;
         filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
       }
+
+      .bonzi-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 9999;
+        animation: bounce 2.5s ease-in-out infinite;
+      }
+
+      .bonzi-dialog {
+        background: #ffffcc;
+        border: 2px solid #000000;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 10px;
+        position: relative;
+        font-family: 'Arial', sans-serif;
+        max-width: 250px;
+      }
+
+      .bonzi-dialog p {
+        color: #000000 !important;
+        text-shadow: none !important;
+      }
+
+      .bonzi-dialog::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #ffffcc;
+      }
+
+      .bonzi-img {
+        max-width: 120px;
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+      }
     </style>
   </head>
   <body>
@@ -202,11 +244,11 @@ import '@/styles/global.css'
 
       <div class="under-construction">
         <img
-          src="https://web.archive.org/web/20091028001942/http://www.geocities.com/paulaabdul_fan/construction.gif"
+          src="https://anlucas.neocities.org/under_construction.gif"
           alt="under construction"
         />
         <img
-          src="https://web.archive.org/web/20091027140250/http://www.geocities.com/paulaabdul_fan/construction.gif"
+          src="https://gifcities.org/assets/img/construction.gif"
           alt="under construction"
         />
       </div>
@@ -218,35 +260,35 @@ import '@/styles/global.css'
       <div class="gif-spam">
         <!-- Bernie Sanders memes -->
         <img
-          src="https://media.giphy.com/media/l0HlMWKwqGX8SMsqQ/giphy.gif"
+          src="https://i.giphy.com/l0HlMWKwqGX8SMsqQ.gif"
           alt="Bernie"
           class="bouncing"
         />
         <img
-          src="https://media.giphy.com/media/3o7TKVUxK7J08Eb27u/giphy.gif"
+          src="https://i.giphy.com/3o7TKVUxK7J08Eb27u.gif"
           alt="Bernie pointing"
-        />
-        <!-- Jar Jar Binks -->
-        <img
-          src="https://media.giphy.com/media/3o84sF21zQYacFcl68/giphy.gif"
-          alt="Jar Jar"
-          class="spinning"
         />
         <!-- Socialist fist -->
         <img
-          src="https://media.giphy.com/media/3ohzdKvLT1DxFxhZAI/giphy.gif"
+          src="https://i.giphy.com/3ohzdKvLT1DxFxhZAI.gif"
           alt="solidarity"
         />
         <!-- Dancing baby (web 1.0 classic) -->
         <img
-          src="https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif"
+          src="https://i.giphy.com/13CoXDiaCcCoyk.gif"
           alt="dancing baby"
         />
         <!-- Hammer and sickle sparkle -->
         <img
-          src="https://media.giphy.com/media/l0IyjiXOXTX6Yemsg/giphy.gif"
+          src="https://i.giphy.com/l0IyjiXOXTX6Yemsg.gif"
           alt="socialism"
           class="bouncing"
+        />
+        <!-- More Bernie -->
+        <img
+          src="https://i.giphy.com/l4FGp6wKxMULYlNW8.gif"
+          alt="bernie spin"
+          class="spinning"
         />
       </div>
 
@@ -254,7 +296,7 @@ import '@/styles/global.css'
 
       <p style="text-align: center;">
         <span class="blink">★</span>
-        <span class="flame-text">MESA PROPOSE THAT THE SENATE GIVE IMMEDIATELY EMERGENCY POWERS TO THE SUPREME CHANCELLOR</span>
+        <span class="flame-text">THE HISTORY OF ALL HITHERTO EXISTING SOCIETY IS THE HISTORY OF CLASS STRUGGLES</span>
         <span class="blink">★</span>
       </p>
 
@@ -272,17 +314,61 @@ import '@/styles/global.css'
 
       <div class="gif-spam">
         <img
-          src="https://media.giphy.com/media/26FPy3QZQqGtDcrja/giphy.gif"
+          src="https://i.giphy.com/26FPy3QZQqGtDcrja.gif"
           alt="Bernie again"
         />
         <img
-          src="https://media.giphy.com/media/3o6Mbfd5fQszubehmE/giphy.gif"
+          src="https://i.giphy.com/3o6Mbfd5fQszubehmE.gif"
           alt="socialism"
           class="spinning"
         />
         <img
-          src="https://media.giphy.com/media/xUPGcJ8LsKVE1yZ7AA/giphy.gif"
+          src="https://i.giphy.com/xUPGcJ8LsKVE1yZ7AA.gif"
           alt="revolution"
+        />
+        <!-- More socialism memes -->
+        <img
+          src="https://i.giphy.com/l0HlDRbVCpYAtFLSE.gif"
+          alt="workers unite"
+          class="bouncing"
+        />
+        <img
+          src="https://i.giphy.com/26FPImXfDlv4AFbBC.gif"
+          alt="feel the bern"
+        />
+        <img
+          src="https://i.giphy.com/l3vR3EssQ5ALagr7y.gif"
+          alt="bernie rally"
+          class="spinning"
+        />
+      </div>
+
+      <hr />
+
+      <div style="text-align: center; margin: 30px 0;">
+        <p class="flame-text" style="font-size: 28px;">
+          ☭ SOCIALISM INTENSIFIES ☭
+        </p>
+      </div>
+
+      <div class="gif-spam">
+        <img
+          src="https://i.giphy.com/l0MYtWqs68KNF92Cs.gif"
+          alt="communism"
+        />
+        <img
+          src="https://i.giphy.com/3oEjI789af0AVurF60.gif"
+          alt="bernie dance"
+          class="bouncing"
+        />
+        <img
+          src="https://i.giphy.com/l0HlNaQ6gWfllcjDO.gif"
+          alt="socialism works"
+          class="spinning"
+        />
+        <img
+          src="https://i.giphy.com/26FPqAHtgCBznaH9m.gif"
+          alt="redistribute"
         />
       </div>
 
@@ -299,16 +385,14 @@ import '@/styles/global.css'
       </p>
 
       <div style="text-align: center; margin: 30px 0;">
-        <img
-          src="https://web.archive.org/web/20090831052802/http://www.geocities.com/paulaabdul_fan/email.gif"
-          alt="email"
-          style="max-width: 150px;"
-        />
+        <div style="font-size: 60px; animation: bounce 1s ease-in-out infinite;">
+          📧✉️📬
+        </div>
       </div>
 
       <div class="marquee" style="background: #00ff00; color: #ff0000;">
         <marquee direction="right">
-          YOUSA IN BIG DOO-DOO DIS TIME, CAPITALISM! | THE BOURGEOISIE CANNOT EXIST EXCEPT ON CONDITION OF CONSTANTLY REVOLUTIONIZING THE INSTRUMENTS OF PRODUCTION
+          WORKERS OF THE WORLD UNITE! | THE BOURGEOISIE CANNOT EXIST EXCEPT ON CONDITION OF CONSTANTLY REVOLUTIONIZING THE INSTRUMENTS OF PRODUCTION | ALL POWER TO THE PEOPLE!
         </marquee>
       </div>
 
@@ -343,7 +427,7 @@ import '@/styles/global.css'
 
     <div class="marquee" style="margin-top: 20px;">
       <marquee scrollamount="20">
-        🦍💜 BONZI BUDDY LOVES YOU 💜🦍 | 🚩 WORKERS UNITE 🚩 | 👾 JAR JAR DID NOTHING WRONG 👾 | 🔥 FEEL THE BERN 🔥
+        ☭ KARL MARX SAYS HI ☭ | 🚩 WORKERS UNITE 🚩 | ✊ SOLIDARITY FOREVER ✊ | 🔥 FEEL THE BERN 🔥 | ☭ SEIZE THE MEANS ☭
       </marquee>
     </div>
 
