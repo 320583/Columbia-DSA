@@ -1,298 +1,290 @@
-![Showcase Card](/public/static/twitter-card.png)
+# Columbia DSA Website
 
-<div align="center">
+This is the official website for Columbia DSA (Democratic Socialists of America), built with modern web technologies to provide a fast, accessible platform for our chapter's news, events, and resources.
 
-## astro-erudite
+## About This Site
 
-![Stargazers]
-[![License]](LICENSE)
+The Columbia DSA website is a static site that includes:
+- **News/Blog** - Articles and updates from the chapter
+- **Calendar** - Upcoming events and meetings
+- **Resources** - Bylaws, organizing materials, and other documents
+- **Contact Information** - How to get in touch with the chapter
 
-</div>
-
-astro-erudite is an opinionated, unstyled static blogging template built with [Astro](https://astro.build/), [Tailwind](https://tailwindcss.com/), and [shadcn/ui](https://ui.shadcn.com/). Extraordinarily loosely based off the [Astro Micro](https://astro-micro.vercel.app/) theme by [trevortylerlee](https://github.com/trevortylerlee).
-
-| ![Preview 1](/public/static/preview-1.png) | ![Preview 2](/public/static/preview-2.png) |
-| ------------------------------------------ | ------------------------------------------ |
-| ![Preview 3](/public/static/preview-3.png) | ![Preview 4](/public/static/preview-4.png) |
-
-> [!NOTE]
-> To learn more about why this template exists, read [The State of Static Blogs in 2024](https://astro-erudite.vercel.app/blog/the-state-of-static-blogs), where I share my take on what constitutes a great blogging template and my goals while developing this one.
+The site is hosted on GitHub Pages at [columbiadsa.com](https://columbiadsa.com).
 
 ---
 
-## Community examples
+## Technologies Used
 
-Below are some fantastic examples of websites based on this template. If you wish to add your site to this list, open a [pull request](https://github.com/jktrn/astro-erudite/pulls)!
+This website is built with several modern technologies that work together to create a fast, maintainable site:
 
-| Site | Author | Tags | Source |
-|-|-|-|-|
-| [enscribe.dev](https://enscribe.dev) | [@jktrn](https://github.com/jktrn) | portfolio, interactive | [→](https://github.com/jktrn/enscribe.dev) |
-| [emile.sh](https://emile.sh) | [@echoghi](https://github.com/echoghi) | minimal, flexoki | [→](https://github.com/echoghi/v5) |
-| [decentparadox.me](https://decentparadox.me) | [@decentparadox](https://github.com/decentparadox) | portfolio, sci-fi | [→](https://github.com/decentparadox/decentparadox.me) |
-| [flocto.github.io](https://flocto.github.io/) | [@flocto](https://github.com/flocto) | blog | [→](https://github.com/flocto/flocto.github.io) |
-| [dumbprism.me](https://www.dumbprism.me/) | [@dumbprism](https://github.com/dumbprism) | portfolio, bento | [→](https://github.com/dumbprism/dumbprism-portfolio) |
-| [hyuki.dev](https://hyuki.dev/) | [@snow0406](https://github.com/snow0406) | minimal, blog | [→](https://github.com/Snow0406/hyuki.dev) |
-| [ldd.cc](https://ldd.cc/) | [@xJoyLu](https://github.com/xjoylu) | blog | [→](https://ldd.cc/) |
-| [rezarezvan.com](https://rezarezvan.com/) | [@rezaarezvan](https://github.com/rezaarezvan) | academic, blog | [→](https://rezarezvan.com/) |
-| [blog.z0x.ca](https://blog.z0x.ca/) | [@z0x](https://z0x.ca) | minimal | [→](https://git.z0x.ca/z0x/blog.z0x.ca/) |
-| [angelaytchan.net](https://angelaytchan.net/) | [@wispyplant](https://github.com/wispyplant) | portfolio, art | [→](https://github.com/wispyplant/wispyplant.github.io) |
-| [kaezr.xyz](https://kaezr.xyz/) | [@kaezrr](https://github.com/kaezrr) | minimal, portfolio | [→](https://github.com/kaezrr/webfolio) |
-| [worldwidewong](https://worldwidewong.vercel.app) | [@brendanwong-web](https://github.com/brendanwong-web) | portfolio, gallery | [→](https://github.com/brendanwong-web/worldwidewong) |
-| [bgajjala.dev](https://bgajjala.dev) | [@bgajjala8](https://github.com/bgajjala8) | minimal, blog | [→](https://github.com/bgajjala8/bgajjala.dev) |
-| [ankitz007.vercel.app](https://ankitz007.vercel.app) | [@ankitz007](https://github.com/ankitz007) | blog | [→](https://github.com/ankitz007/webfolio) |
-| [sadman.ca](https://sadman.ca) | [@sadmanca](https://github.com/sadmanca) | blog, media | [→](https://github.com/sadmanca/blogv3) |
-| [marcel-to.vercel.app](https://marcel-to.vercel.app) | [@Marcel-TO](https://github.com/Marcel-TO) | portfolio, docs | [→](https://github.com/Marcel-TO/marcel-to-website) |
-| [merox.dev](https://merox.dev) | [@meroxdotdev](https://github.com/meroxdotdev) | blog, devops, homelab | [→](https://github.com/meroxdotdev/merox) |
-| [Off by One](https://justoffbyone.com) | [@cduruk](https://github.com/cduruk) | engineering, blog | [→](https://github.com/cduruk/offbyone) |
-| [holywater.dev](https://holywater.dev) | [@holywater2372](https://github.com/holywater2372) | cybersecurity, blog | [→](https://github.com/holywater2372/holywater.dev) |
-| [theinfinull.com](https://theinfinull.com) | [@theinfinull](https://github.com/theinfinull) | dev, portfolio, blog | [→](https://github.com/theinfinull/portfolio) |
-| [chai-pin-zheng.xyz](https://www.chai-pin-zheng.xyz/) | [@Ducksss](https://github.com/Ducksss) | portfolio, interactive, blog, ascii | [→](https://github.com/Ducksss/ascii-astro-erudite) |
-| [nightxade.dev](https://nightxade.dev) | [@nightxade](https://github.com/nightxade) | blog, portfolio | [→](https://github.com/nightxade/nightsite)
+### Core Framework
+- **[Astro](https://astro.build/)** - The main framework that builds the site. Astro is great for content-heavy sites because it generates fast, static HTML pages while still allowing interactive components where needed.
 
-## Features
+### Styling & UI
+- **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework that makes styling consistent and maintainable
+- **[shadcn/ui](https://ui.shadcn.com/)** - Pre-built, accessible UI components (buttons, alerts, etc.) that automatically support light/dark themes
+- **[React](https://react.dev/)** - Used for interactive components like the construction banner
 
-- [Astro](https://astro.build/)'s [Islands](https://docs.astro.build/en/concepts/islands/) architecture for selective hydration and client-side interactivity while maintaining fast static site rendering.
-- [shadcn/ui](https://ui.shadcn.com/) with [Tailwind](https://tailwindcss.com/) color conventions for automatic light and dark theme styling. Features accessible, theme-aware UI components for navigation, buttons, and more.
-- [Expressive Code](https://expressive-code.com/) for enhanced code block styling, syntax highlighting, and code block titles.
-- Blog authoring with [MDX](https://mdxjs.com/) for component-rich content and $\LaTeX$ math rendering via [KaTeX](https://katex.org/).
-- Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/) in <abbr title="Single Page Application">SPA</abbr> mode for smooth route animations.
-- SEO optimization with granular metadata and [Open Graph](https://ogp.me/) tag control for each post.
-- [RSS](https://en.wikipedia.org/wiki/RSS) feed and sitemap generation.
-- Subpost support for breaking long content into digestible parts and organizing related series.
-- Author profiles with a dedicated authors page and multi-author post support.
-- Project tags with a dedicated tags page for post categorization and discovery.
-- Custom Callout component variants for enhanced technical writing.
+### Content & Formatting
+- **[MDX](https://mdxjs.com/)** - Allows writing blog posts in Markdown with support for React components
+- **[Expressive Code](https://expressive-code.com/)** - Enhanced code block styling with syntax highlighting
+- **[KaTeX](https://katex.org/)** - Math equation rendering support
 
-### Technology stack
+### Deployment
+- **[GitHub Pages](https://pages.github.com/)** - Free hosting directly from the GitHub repository
+- **[GitHub Actions](https://github.com/features/actions)** - Automated builds and deployments when code is pushed
 
-This is a list of the various technologies used to build this template:
+---
 
-| Category   | Technology Name                                                                            |
-| ---------- | ------------------------------------------------------------------------------------------ |
-| Framework  | [Astro](https://astro.build/)                                                              |
-| Styling    | [Tailwind](https://tailwindcss.com)                                                        |
-| Components | [shadcn/ui](https://ui.shadcn.com/)                                                        |
-| Content    | [MDX](https://mdxjs.com/)                                                                  |
-| Codeblocks | [Expressive Code](https://expressive-code.com/), [Shiki](https://github.com/shikijs/shiki) |
-| Graphics   | [Figma](https://www.figma.com/)                                                            |
-| Deployment | [Vercel](https://vercel.com)                                                               |
+## Running the Site Locally
 
-## Getting started
+If you want to work on the website on your own computer, follow these steps:
 
-1. Hit &ldquo;Use this template&rdquo;, the big green button on the top right, to create a new repository in your own GitHub account with this template.
+### Prerequisites
 
-2. Clone the repository:
+You'll need to have these installed on your computer:
+1. **[Node.js](https://nodejs.org/)** (version 18 or newer) - Download from nodejs.org
+2. **[Git](https://git-scm.com/)** - For downloading and managing the code
 
+To check if you have these installed, open a terminal/command prompt and run:
+```bash
+node --version
+git --version
+```
+
+### Setup Instructions
+
+1. **Clone the repository** (download the code to your computer):
    ```bash
-   git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPO_NAME].git
-   cd [YOUR_REPO_NAME]
+   git clone https://github.com/320583/Columbia-DSA.git
+   cd Columbia-DSA
    ```
 
-3. Install dependencies:
-
+2. **Install dependencies** (download all the required packages):
    ```bash
    npm install
    ```
 
-4. Start the development server:
-
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-5. Open your browser and visit `http://localhost:1234` to get started. The following commands are also available:
+4. **View the site** - Open your web browser and go to:
+   ```
+   http://localhost:1234
+   ```
 
-   | Command            | Description                                                     |
-   | ------------------ | --------------------------------------------------------------- |
-   | `npm run start`    | Alias for `npm run dev`                                         |
-   | `npm run build`    | Run type checking and build the project                         |
-   | `npm run preview`  | Previews the built project                                      |
-   | `npm run astro`    | Run Astro CLI commands                                          |
-   | `npm run prettier` | Blanket format all files using [Prettier](https://prettier.io/) |
+The site will automatically reload when you make changes to files!
 
-### Site configuration
+### Useful Commands
 
-Edit the `src/consts.ts` file to update your site's metadata, navigation links, and social links:
+| Command | What it does |
+|---------|-------------|
+| `npm run dev` | Start the development server (use this most of the time) |
+| `npm run build` | Build the production version of the site |
+| `npm run preview` | Preview the built site locally |
+| `npm run prettier` | Auto-format all code files |
 
-```ts
-export const SITE: Site = {
-  title: 'astro-erudite',
-  description: // ...
-  href: 'https://astro-erudite.vercel.app',
-  featuredPostCount: 2,
-  postsPerPage: 3,
-}
-
-export const NAV_LINKS: SocialLink[] = [
-  {
-    href: '/blog',
-    label: 'blog',
-  },
-  // ...
-]
-
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    href: 'https://github.com/jktrn',
-    label: 'GitHub',
-  },
-  // ...
-]
-```
-
-### Color palette
-
-Colors are defined in `src/styles/global.css` in [OKLCH format](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch), using the [shadcn/ui](https://ui.shadcn.com/) convention:
-
-```css
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-}
-
-[data-theme='dark'] {
-  /* ... */
-}
-```
-
-### Favicons
-
-Favicons are generated using [RealFaviconGenerator](https://realfavicongenerator.net/). To adjust the favicons, replace the files in the `public/` directory (such as `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, etc.) with your own. After updating the favicon files, you'll also need to adjust the references in `src/components/Favicons.astro` to match your new favicon filenames and paths:
-
-```html
-<!-- Replace these with the generated meta tags -->
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="astro-erudite" />
-<link rel="manifest" href="/site.webmanifest" />
-```
-
-## Adding content
-
-### Blog posts
-
-Add new blog posts as MDX files in the `src/content/blog/` directory. Use the following frontmatter structure:
-
-```yml
 ---
-title: 'Your Post Title'
-description: 'A brief description of your post!'
-date: 2024-01-01
-tags: ['tag1', 'tag2']
-image: './image.png'
-authors: ['author1', 'author2']
+
+## Adding a Blog Post
+
+This section explains how to add a new blog post to the website. Don't worry if you're not technical - just follow these steps carefully!
+
+### Step 1: Create a new folder for your post
+
+1. Navigate to the blog posts folder: `src/content/blog/`
+2. Create a new folder with a descriptive name using dashes instead of spaces
+   - **Good examples**: `may-day-2026`, `mutual-aid-drive`, `general-meeting-recap`
+   - **Bad examples**: `May Day 2026`, `post1`, `new post`
+
+### Step 2: Create the blog post file
+
+1. Inside your new folder, create a file named `index.md`
+2. Open this file in a text editor (VS Code, Notepad, TextEdit, etc.)
+
+### Step 3: Add the frontmatter (metadata)
+
+At the very top of your `index.md` file, add information about your post between three dashes (`---`). Here's a template:
+
+```markdown
+---
+title: 'Your Post Title Here'
+description: 'A brief summary of what this post is about'
+date: 2026-01-15
+tags: ['organizing', 'events']
+authors: ['columbia-dsa']
 draft: false
 ---
 ```
 
-The blog post schema is defined as follows:
+**Field explanations:**
+- **title**: The main headline (keep it under 60 characters)
+- **description**: A short summary that appears in previews (keep it under 155 characters)
+- **date**: The publish date in `YYYY-MM-DD` format (year-month-day)
+- **tags**: Categories for your post - use existing tags when possible:
+  - `organizing`, `labor`, `electoral`, `membership`, `events`, `international`, etc.
+- **authors**: Who wrote this post. Use `['columbia-dsa']` for chapter-wide posts
+- **draft**: Set to `true` to hide the post, `false` to publish it
 
-| Field         | Type (Zod)      | Requirements                                                                                                                                                                    | Required |
-| ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `title`       | `string`        | Should be ≤60 characters.                                                                                                                                                       | Yes      |
-| `description` | `string`        | Should be ≤155 characters.                                                                                                                                                      | Yes      |
-| `date`        | `coerce.date()` | Must be in `YYYY-MM-DD` format.                                                                                                                                                 | Yes      |
-| `order`       | `number`        | Sort order for subposts with the same `date`. Defaults to `0` if not provided.                                                                                                  | Optional |
-| `image`       | `image()`       | Should be exactly 1200px &times; 630px.                                                                                                                                         | Optional |
-| `tags`        | `string[]`      | Preferably use kebab-case for these.                                                                                                                                            | Optional |
-| `authors`     | `string[]`      | If the author has a profile, use the id associated with their Markdown file in `src/content/authors/` (e.g. if their file is named `jane-doe.md`, use `jane-doe` in the array). | Optional |
-| `draft`       | `boolean`       | Defaults to `false` if not provided.                                                                                                                                            | Optional |
+### Step 4: Write your content
 
-### Authors
+After the closing `---`, write your blog post content using Markdown formatting:
 
-Add author information in `src/content/authors/` as Markdown files. A file named `[author-name].md` can be associated with a blog post if `"author-name"` (the id) is added to the `authors` field:
-
-```yml
+```markdown
 ---
-name: 'enscribe'
-pronouns: 'he/him'
-avatar: 'https://gravatar.com/avatar/9bfdc4ec972793cf05cb91efce5f4aaaec2a0da1bf4ec34dad0913f1d845faf6.webp?size=256'
-bio: 'd(-_-)b'
-website: 'https://enscribe.dev'
-twitter: 'https://twitter.com/enscry'
-github: 'https://github.com/jktrn'
-mail: 'jason@enscribe.dev'
+title: 'May Day 2026 Celebration'
+description: 'Join us for our annual May Day celebration and march'
+date: 2026-04-20
+tags: ['events', 'organizing']
+authors: ['columbia-dsa']
+draft: false
 ---
+
+# May Day is Coming!
+
+Join Columbia DSA on **May 1st** for our annual International Workers' Day celebration!
+
+## Event Details
+
+- **When**: May 1, 2026 at 2:00 PM
+- **Where**: Main Street Plaza
+- **What to bring**: Signs, banners, and solidarity!
+
+We'll be marching together with other labor organizations...
+
+[Sign up here](https://example.com/signup)
 ```
 
-The author schema is defined as follows:
+**Basic Markdown formatting:**
+- `# Heading` = Large heading
+- `## Smaller Heading` = Medium heading
+- `**bold text**` = **bold text**
+- `*italic text*` = *italic text*
+- `[link text](URL)` = Clickable link
+- `-` or `*` at the start of a line = bullet points
+- Blank line = new paragraph
 
-| Field      | Type (Zod)                                 | Requirements                                                                                                                                                             | Required |
-| ---------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| `name`     | `string`                                   | n/a                                                                                                                                                                      | Yes      |
-| `pronouns` | `string`                                   | n/a                                                                                                                                                                      | Optional |
-| `avatar`   | `string.url()` or `string.startsWith('/')` | Should be either a valid URL or a path starting with `/`. Preferably use [Gravatar](https://en.gravatar.com/site/implement/images/) with the `?size=256` size parameter. | Yes      |
-| `bio`      | `string`                                   | n/a                                                                                                                                                                      | Optional |
-| `mail`     | `string.email()`                           | Must be a valid email address.                                                                                                                                           | Optional |
-| `website`  | `string.url()`                             | Must be a valid URL.                                                                                                                                                     | Optional |
-| `twitter`  | `string.url()`                             | Must be a valid URL.                                                                                                                                                     | Optional |
-| `github`   | `string.url()`                             | Must be a valid URL.                                                                                                                                                     | Optional |
-| `linkedin` | `string.url()`                             | Must be a valid URL.                                                                                                                                                     | Optional |
-| `discord`  | `string.url()`                             | Must be a valid URL.                                                                                                                                                     | Optional |
+### Step 5: Add images (optional)
 
-> [!TIP]
-> You can add as many social media links as you want, as long as you adjust the schema! Make sure you also support the new field in the `src/components/SocialIcons.astro` component.
+To include images in your post:
 
-### Projects
+1. Place image files in the same folder as your `index.md` file
+2. Reference them in your post like this:
 
-Add projects in `src/content/projects/` as Markdown files:
-
-```yml
----
-name: 'Project A'
-description: 'This is an example project description! You should replace this with a description of your own project.'
-tags: ['Framework A', 'Library B', 'Tool C', 'Resource D']
-image: '/static/1200x630.png'
-link: 'https://example.com'
-startDate: '2024-01-01'
-endDate: '2024-01-01'
----
+```markdown
+![Description of image](./image-name.jpg)
 ```
 
-The project schema is defined as follows:
+**Best practices for images:**
+- Use descriptive filenames: `may-day-march.jpg` not `IMG_1234.jpg`
+- Keep file sizes reasonable (under 1MB when possible)
+- Supported formats: `.jpg`, `.png`, `.webp`
 
-| Field         | Type (Zod)      | Requirements                            | Required |
-| ------------- | --------------- | --------------------------------------- | -------- |
-| `name`        | `string`        | n/a                                     | Yes      |
-| `description` | `string`        | n/a                                     | Yes      |
-| `tags`        | `string[]`      | n/a                                     | Yes      |
-| `image`       | `image()`       | Should be exactly 1200px &times; 630px. | Yes      |
-| `link`        | `string.url()`  | Must be a valid URL.                    | Yes      |
-| `startDate`   | `coerce.date()` | Must be in `YYYY-MM-DD` format.         | Optional |
-| `endDate`     | `coerce.date()` | Must be in `YYYY-MM-DD` format.         | Optional |
+### Step 6: Preview your post
 
-## License
+1. Make sure the development server is running (`npm run dev`)
+2. Go to `http://localhost:1234/blog` in your browser
+3. Find your post and check that everything looks correct
 
-This project is open source and available under the [MIT License](LICENSE).
+### Step 7: Publish your post
+
+Once your post looks good:
+
+1. **Save all your changes**
+2. **Commit your changes** (save them to git):
+   ```bash
+   git add .
+   git commit -m "Add blog post about [topic]"
+   ```
+3. **Push to GitHub** (upload to the website):
+   ```bash
+   git push
+   ```
+
+The website will automatically rebuild and your post will appear live within a few minutes!
+
+### Common Issues & Tips
+
+**My post isn't showing up:**
+- Check that `draft: false` in the frontmatter
+- Make sure the date isn't in the future
+- Verify the file is named `index.md` (not `index.txt` or anything else)
+
+**Images aren't loading:**
+- Make sure the image is in the same folder as `index.md`
+- Check that the image filename in your markdown matches exactly (including `.jpg` or `.png`)
+- Use `./` before the filename: `./my-image.jpg`
+
+**Formatting looks weird:**
+- Make sure there's a blank line between paragraphs
+- Check that all `---` lines have exactly three dashes
+- Verify there's no extra spaces before the frontmatter fields
+
+**Need help?**
+- Ask in the chapter Discord/Slack
+- Check the [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+- Look at existing posts in `src/content/blog/` for examples
 
 ---
 
-### Star history
+## Site Structure
 
-<a href="https://star-history.com/#jktrn/astro-erudite&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jktrn/astro-erudite&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jktrn/astro-erudite&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jktrn/astro-erudite&type=Date" />
- </picture>
-</a>
+```
+columbia-dsa-2/
+├── public/              # Static files (images, fonts, etc.)
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── content/
+│   │   ├── blog/       # Blog posts (add new posts here!)
+│   │   └── authors/    # Author profiles
+│   ├── layouts/        # Page templates
+│   ├── pages/          # Site pages (routes)
+│   └── styles/         # CSS styling
+├── astro.config.ts     # Astro configuration
+└── package.json        # Project dependencies
+```
 
 ---
 
-Built with &hearts; by [enscribe](https://enscribe.dev)!
+## Making Changes
 
-[Stargazers]: https://img.shields.io/github/stars/jktrn/astro-erudite?color=fafafa&logo=github&logoColor=fff&style=for-the-badge
-[License]: https://img.shields.io/github/license/jktrn/astro-erudite?color=0a0a0a&logo=github&logoColor=fff&style=for-the-badge
+### Before Publishing
+When the site is under construction, several features are temporarily disabled:
+- Search engine indexing (robots.txt blocks crawlers)
+- Sitemap generation
+- Web archive crawling
+
+These are all marked with `CONSTRUCTION-TEMP` comments in the code. To find all temporary changes:
+
+```bash
+grep -r "CONSTRUCTION-TEMP" src/
+```
+
+### Going Live Checklist
+When ready to make the site fully public:
+
+1. Search for `CONSTRUCTION-TEMP` in the codebase
+2. Uncomment sitemap generation in `astro.config.ts`
+3. Remove robots meta tags from `src/components/head.astro`
+4. Update `public/robots.txt` to allow crawlers
+5. Remove the construction banner from `src/layouts/layout.astro`
+6. Uncomment Discord link in `src/consts.ts` (when ready)
+
+---
+
+## Contributing
+
+This is a chapter-run project. If you'd like to contribute:
+
+1. **For content** (blog posts, updates): Follow the "Adding a Blog Post" section above
+2. **For code/design changes**:
+   - Create a new branch: `git checkout -b your-feature-name`
+   - Make your changes
+   - Test locally with `npm run dev`
+   - Commit and push your branch
+   - Open a Pull Request on GitHub
+
+Questions? Reach out to the website maintainers in the chapter communications.
