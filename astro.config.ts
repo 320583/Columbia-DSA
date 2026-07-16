@@ -20,7 +20,9 @@ import type { ExpressiveCodeTheme } from 'rehype-expressive-code'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  site: 'https://astro-erudite.vercel.app',
+  output: 'static',
+  site: 'https://320583.github.io',
+  base: '/Columbia-DSA',
   integrations: [mdx(), react(), sitemap(), icon()],
   vite: {
     plugins: [tailwindcss()],
