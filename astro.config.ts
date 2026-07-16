@@ -21,8 +21,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   output: 'static',
-  site: 'https://320583.github.io',
-  base: '/Columbia-DSA',
+  site: 'https://columbiadsa.com',
   integrations: [mdx(), react(), sitemap(), icon()],
   vite: {
     plugins: [tailwindcss()],
