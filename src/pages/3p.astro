@@ -147,6 +147,9 @@ import '@/styles/global.css'
         right: 20px;
         z-index: 9999;
         animation: bounce 2s ease-in-out infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
       }
 
       .clippy-dialog {
@@ -224,6 +227,48 @@ import '@/styles/global.css'
         max-width: 120px;
         filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
       }
+
+      .hit-counter {
+        background: #000000;
+        border: 3px ridge #00ff00;
+        padding: 10px;
+        display: inline-block;
+        font-family: 'Courier New', monospace;
+        color: #00ff00;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 0 20px #00ff00;
+      }
+
+      .webring {
+        background: linear-gradient(45deg, #ff00ff, #00ffff);
+        border: 5px double #ffff00;
+        padding: 15px;
+        margin: 20px 0;
+        text-align: center;
+        animation: rainbow 3s infinite;
+      }
+
+      .new-badge {
+        display: inline-block;
+        background: #ff0000;
+        color: #ffff00;
+        padding: 5px 10px;
+        border: 2px solid #ffff00;
+        font-weight: bold;
+        animation: blink 0.5s step-start infinite;
+        transform: rotate(-15deg);
+        font-size: 14px;
+      }
+
+      .flame-divider {
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 10px;
+        color: #ff4500;
+        text-shadow: 0 0 10px #ff0000;
+      }
     </style>
   </head>
   <body>
@@ -242,15 +287,34 @@ import '@/styles/global.css'
         <p>VISITOR #420691337 | YOU ARE NOT ALONE, COMRADE</p>
       </div>
 
+      <div style="text-align: center; margin: 20px 0;">
+        <div class="hit-counter">
+          <div>YOU ARE VISITOR NUMBER:</div>
+          <div style="font-size: 36px; color: #ff0000; text-shadow: 2px 2px #00ff00;">
+            0️⃣0️⃣4️⃣2️⃣0️⃣6️⃣9️⃣
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <div style="display: inline-block; background: #000000; border: 3px ridge #00ff00; padding: 10px; margin: 5px;">
+          <p style="color: #ff0000; font-size: 16px; font-weight: bold; margin: 0;">⚠️ NO HOTLINKING ⚠️</p>
+        </div>
+        <div style="display: inline-block; background: #000080; border: 3px ridge #ffffff; padding: 10px; margin: 5px;">
+          <p style="color: #ffffff; font-size: 16px; font-weight: bold; margin: 0;">NETSCAPE NOW! 🌐</p>
+        </div>
+        <div style="display: inline-block; background: #0066cc; border: 3px ridge #ffffff; padding: 10px; margin: 5px;">
+          <p style="color: #ffffff; font-size: 16px; font-weight: bold; margin: 0;">IE 4.0 💻</p>
+        </div>
+      </div>
+
       <div class="under-construction">
-        <img
-          src="https://anlucas.neocities.org/under_construction.gif"
-          alt="under construction"
-        />
-        <img
-          src="https://gifcities.org/assets/img/construction.gif"
-          alt="under construction"
-        />
+        <div style="background: #ffff00; border: 3px solid #000000; padding: 10px; display: inline-block; animation: blink 0.5s step-start infinite;">
+          <p style="color: #000000; font-size: 20px; font-weight: bold; margin: 0;">🚧 UNDER CONSTRUCTION 🚧</p>
+        </div>
+        <div style="background: #ff0000; border: 3px solid #ffff00; padding: 10px; display: inline-block; animation: blink 0.7s step-start infinite;">
+          <p style="color: #ffff00; font-size: 20px; font-weight: bold; margin: 0;">⚠️ WORK IN PROGRESS ⚠️</p>
+        </div>
       </div>
 
       <p class="flame-text" style="text-align: center;">
@@ -300,8 +364,26 @@ import '@/styles/global.css'
         <span class="blink">★</span>
       </p>
 
+      <div class="flame-divider">
+        🔥🔥🔥🔥🔥🔥🔥
+      </div>
+
+      <div class="webring">
+        <p style="margin: 0; font-size: 20px; font-weight: bold; color: #000000; text-shadow: 2px 2px #ffffff;">
+          <span class="spinning">⚙️</span>
+          THIS SITE IS PART OF THE SOCIALIST WEBRING
+          <span class="spinning">⚙️</span>
+        </p>
+        <p style="margin: 10px 0 0 0; font-size: 16px; color: #000000;">
+          [ <a href="#" style="color: #0000ff; text-decoration: underline;">Previous</a> |
+          <a href="#" style="color: #0000ff; text-decoration: underline;">Random</a> |
+          <a href="#" style="color: #0000ff; text-decoration: underline;">Next</a> ]
+        </p>
+      </div>
+
       <p style="text-align: center; font-size: 24px;">
         🦍 <strong>BONZI BUDDY SAYS:</strong> "Hello! I am here to help you navigate the dialectical materialism of late-stage capitalism!"
+        <span class="new-badge">NEW!</span>
       </p>
 
       <hr />
@@ -385,8 +467,23 @@ import '@/styles/global.css'
       </p>
 
       <div style="text-align: center; margin: 30px 0;">
+        <p style="color: #ffff00; font-size: 20px;">
+          <span class="blink">✨</span>
+          SIGN MY GUESTBOOK
+          <span class="blink">✨</span>
+          <span class="new-badge">HOT!</span>
+        </p>
         <div style="font-size: 60px; animation: bounce 1s ease-in-out infinite;">
           📧✉️📬
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 20px 0; font-size: 14px;">
+        <div style="display: inline-block; background: #000000; color: #00ff00; padding: 10px; border: 2px solid #00ff00; font-family: 'Courier New', monospace;">
+          <p style="margin: 0; color: #00ff00;">SITE STATS:</p>
+          <p style="margin: 5px 0; color: #00ff00;">⚡ TOTAL REVOLUTIONS: 1,917</p>
+          <p style="margin: 5px 0; color: #00ff00;">☭ MEMBERS ONLINE: 420</p>
+          <p style="margin: 5px 0; color: #00ff00;">🚩 CAPITALISM DESTROYED: 69%</p>
         </div>
       </div>
 
@@ -418,9 +515,33 @@ import '@/styles/global.css'
       </div>
 
       <div style="text-align: center; margin: 30px 0;">
+        <p style="color: #ffff00; font-size: 18px; font-weight: bold;">
+          <span class="bouncing">⭐</span>
+          BOOKMARK THIS PAGE!
+          <span class="bouncing">⭐</span>
+        </p>
+        <p style="color: #00ffff; font-size: 14px; margin: 10px 0;">
+          Press Ctrl+D (Cmd+D on Mac) to add to favorites!
+        </p>
+      </div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <p style="color: #ff00ff; font-size: 16px; font-family: 'Courier New', monospace;">
+          <span class="blink">▶</span>
+          <a href="mailto:solidarity@columbiadsa.com" style="color: #00ffff; text-decoration: underline;">
+            EMAIL THE WEBMASTER
+          </a>
+          <span class="blink">◀</span>
+        </p>
+      </div>
+
+      <div style="text-align: center; margin: 30px 0;">
         <p style="color: #ffff00; font-size: 16px;">
           © 1997 Columbia DSA GeoCities Angelfire Tripod Webring<br />
-          <span class="blink">Last updated: Never | Page hits: ∞</span>
+          <span class="blink">Last updated: Never | Page hits: ∞</span><br />
+          <span style="font-size: 12px; color: #00ff00;">
+            Hosted on GeoCities • Member of 47 webrings • Optimized for 800x600
+          </span>
         </p>
       </div>
     </div>
@@ -449,6 +570,7 @@ import '@/styles/global.css'
         src="https://upload.wikimedia.org/wikipedia/en/d/d8/Windows_11_Clippy_paperclip_emoji.png"
         alt="Clippy"
         class="clippy-img"
+        style="margin-right: 20px;"
       />
     </div>
 
