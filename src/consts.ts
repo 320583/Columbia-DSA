@@ -55,10 +55,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: 'https://www.facebook.com/ColumbiaSCDSA/',
     label: 'Facebook',
   },
-  {
-    href: 'https://discordapp.com',
-    label: 'Discord',
-  },
+  // CONSTRUCTION-TEMP: Uncomment when Discord server is ready
+  // {
+  //   href: 'https://discordapp.com',
+  //   label: 'Discord',
+  // },
   {
     href: '/rss.xml',
     label: 'RSS',

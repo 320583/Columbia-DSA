@@ -13,6 +13,14 @@ import Favicons from './favicons.astro'
   />
   <meta name="generator" content={Astro.generator} />
 
+  <!-- CONSTRUCTION-TEMP: Remove when site is ready for indexing -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, nocache" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot-news" content="noindex, nofollow" />
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="ia_archiver" content="noarchive" />
+  <meta name="archive" content="no" />
+
   <meta name="HandheldFriendly" content="True" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +41,8 @@ import Favicons from './favicons.astro'
     media="(prefers-color-scheme: light)"
   />
 
-  <link rel="sitemap" href="/sitemap-index.xml" />
+  <!-- CONSTRUCTION-TEMP: Uncomment when site is ready for indexing -->
+  <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
   <link rel="manifest" href="/site.webmanifest" />
   <link
     rel="alternate"

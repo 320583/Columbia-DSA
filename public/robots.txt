@@ -1,0 +1,13 @@
+# CONSTRUCTION-TEMP: Replace this entire file with proper robots.txt when site is ready
+# For now, blocking all crawlers and archivers
+User-agent: *
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Wayback
+Disallow: /
