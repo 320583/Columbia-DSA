@@ -1,0 +1,370 @@
+---
+// CONSTRUCTION-TEMP: Remove this entire file when cleaning up easter eggs
+import '@/styles/global.css'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Welcome to the REVOLUTIONARY ZONE</title>
+    <style>
+      /* CONSTRUCTION-TEMP: All styles in this file are part of the easter egg */
+      body {
+        background: #ff00ff;
+        background-image: url('https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif');
+        background-size: 200px;
+        font-family: 'Comic Sans MS', cursive;
+        color: #00ff00;
+        text-shadow: 2px 2px #ff0000;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 48px;
+        color: #ffff00;
+        text-align: center;
+        animation: rainbow 2s infinite;
+        text-shadow: 3px 3px #000000;
+      }
+
+      @keyframes rainbow {
+        0% { color: #ff0000; }
+        16% { color: #ff8800; }
+        33% { color: #ffff00; }
+        50% { color: #00ff00; }
+        66% { color: #0088ff; }
+        83% { color: #8800ff; }
+        100% { color: #ff0000; }
+      }
+
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+
+      .marquee {
+        background: #ff0000;
+        color: #ffff00;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        border: 5px solid #00ff00;
+      }
+
+      .container {
+        background: rgba(0, 0, 0, 0.8);
+        border: 10px ridge #ff00ff;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 900px;
+        box-shadow: 0 0 50px #ff00ff;
+      }
+
+      .gif-spam {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .gif-spam img {
+        max-width: 150px;
+        border: 3px solid #00ff00;
+        box-shadow: 0 0 20px #ff00ff;
+      }
+
+      .spinning {
+        animation: spin 3s linear infinite;
+        display: inline-block;
+      }
+
+      .bouncing {
+        animation: bounce 1s ease-in-out infinite;
+        display: inline-block;
+      }
+
+      .blink {
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+
+      .counter {
+        background: #000000;
+        color: #00ff00;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Courier New', monospace;
+        border: 3px solid #00ff00;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #ffffff;
+      }
+
+      .flame-text {
+        color: #ff4500;
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .under-construction {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .under-construction img {
+        max-width: 100px;
+      }
+
+      hr {
+        border: 3px dashed #ff00ff;
+        margin: 30px 0;
+      }
+
+      .clippy-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        animation: bounce 2s ease-in-out infinite;
+      }
+
+      .clippy-dialog {
+        background: #ffffcc;
+        border: 2px solid #000000;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 10px;
+        position: relative;
+        font-family: 'Arial', sans-serif;
+        color: #000000;
+        text-shadow: none;
+        max-width: 250px;
+      }
+
+      .clippy-dialog::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 30px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #ffffcc;
+      }
+
+      .clippy-img {
+        max-width: 100px;
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      <marquee>🚩 SEIZE THE MEMES OF PRODUCTION 🚩 WORKERS OF THE WORLD UNITE 🚩 FREE BERNIE 🚩 BASH THE FASH 🚩</marquee>
+    </div>
+
+    <h1>
+      <span class="spinning">🌟</span>
+      WELCOME TO THE REVOLUTION
+      <span class="spinning">🌟</span>
+    </h1>
+
+    <div class="container">
+      <div class="counter">
+        <p>VISITOR #420691337 | YOU ARE NOT ALONE, COMRADE</p>
+      </div>
+
+      <div class="under-construction">
+        <img
+          src="https://web.archive.org/web/20091028001942/http://www.geocities.com/paulaabdul_fan/construction.gif"
+          alt="under construction"
+        />
+        <img
+          src="https://web.archive.org/web/20091027140250/http://www.geocities.com/paulaabdul_fan/construction.gif"
+          alt="under construction"
+        />
+      </div>
+
+      <p class="flame-text" style="text-align: center;">
+        🔥 BONZI BUDDY SAYS: EXPAND YOUR CONSCIOUSNESS 🔥
+      </p>
+
+      <div class="gif-spam">
+        <!-- Bernie Sanders memes -->
+        <img
+          src="https://media.giphy.com/media/l0HlMWKwqGX8SMsqQ/giphy.gif"
+          alt="Bernie"
+          class="bouncing"
+        />
+        <img
+          src="https://media.giphy.com/media/3o7TKVUxK7J08Eb27u/giphy.gif"
+          alt="Bernie pointing"
+        />
+        <!-- Jar Jar Binks -->
+        <img
+          src="https://media.giphy.com/media/3o84sF21zQYacFcl68/giphy.gif"
+          alt="Jar Jar"
+          class="spinning"
+        />
+        <!-- Socialist fist -->
+        <img
+          src="https://media.giphy.com/media/3ohzdKvLT1DxFxhZAI/giphy.gif"
+          alt="solidarity"
+        />
+        <!-- Dancing baby (web 1.0 classic) -->
+        <img
+          src="https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif"
+          alt="dancing baby"
+        />
+        <!-- Hammer and sickle sparkle -->
+        <img
+          src="https://media.giphy.com/media/l0IyjiXOXTX6Yemsg/giphy.gif"
+          alt="socialism"
+          class="bouncing"
+        />
+      </div>
+
+      <hr />
+
+      <p style="text-align: center;">
+        <span class="blink">★</span>
+        <span class="flame-text">MESA PROPOSE THAT THE SENATE GIVE IMMEDIATELY EMERGENCY POWERS TO THE SUPREME CHANCELLOR</span>
+        <span class="blink">★</span>
+      </p>
+
+      <p style="text-align: center; font-size: 24px;">
+        🦍 <strong>BONZI BUDDY SAYS:</strong> "Hello! I am here to help you navigate the dialectical materialism of late-stage capitalism!"
+      </p>
+
+      <hr />
+
+      <div style="text-align: center;">
+        <p class="blink" style="color: #ff00ff; font-size: 28px;">
+          ⚠️ THIS SITE BEST VIEWED IN NETSCAPE NAVIGATOR 4.0 ⚠️
+        </p>
+      </div>
+
+      <div class="gif-spam">
+        <img
+          src="https://media.giphy.com/media/26FPy3QZQqGtDcrja/giphy.gif"
+          alt="Bernie again"
+        />
+        <img
+          src="https://media.giphy.com/media/3o6Mbfd5fQszubehmE/giphy.gif"
+          alt="socialism"
+          class="spinning"
+        />
+        <img
+          src="https://media.giphy.com/media/xUPGcJ8LsKVE1yZ7AA/giphy.gif"
+          alt="revolution"
+        />
+      </div>
+
+      <hr />
+
+      <p style="text-align: center; font-size: 20px;">
+        <span class="bouncing">🚩</span>
+        <span class="bouncing">🚩</span>
+        <span class="bouncing">🚩</span>
+        FROM EACH ACCORDING TO THEIR ABILITY, TO EACH ACCORDING TO THEIR MEMES
+        <span class="bouncing">🚩</span>
+        <span class="bouncing">🚩</span>
+        <span class="bouncing">🚩</span>
+      </p>
+
+      <div style="text-align: center; margin: 30px 0;">
+        <img
+          src="https://web.archive.org/web/20090831052802/http://www.geocities.com/paulaabdul_fan/email.gif"
+          alt="email"
+          style="max-width: 150px;"
+        />
+      </div>
+
+      <div class="marquee" style="background: #00ff00; color: #ff0000;">
+        <marquee direction="right">
+          YOUSA IN BIG DOO-DOO DIS TIME, CAPITALISM! | THE BOURGEOISIE CANNOT EXIST EXCEPT ON CONDITION OF CONSTANTLY REVOLUTIONIZING THE INSTRUMENTS OF PRODUCTION
+        </marquee>
+      </div>
+
+      <div style="text-align: center; margin: 30px 0;">
+        <p style="color: #ffff00; font-size: 16px;">
+          © 1997 Columbia DSA GeoCities Angelfire Tripod Webring<br />
+          <span class="blink">Last updated: Never | Page hits: ∞</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="marquee" style="margin-top: 20px;">
+      <marquee scrollamount="20">
+        🦍💜 BONZI BUDDY LOVES YOU 💜🦍 | 🚩 WORKERS UNITE 🚩 | 👾 JAR JAR DID NOTHING WRONG 👾 | 🔥 FEEL THE BERN 🔥
+      </marquee>
+    </div>
+
+    <!-- Clippy Assistant -->
+    <div class="clippy-container">
+      <div class="clippy-dialog">
+        <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+          <strong>It looks like you're trying to build socialism.</strong><br />
+          Would you like help with that?
+        </p>
+        <p style="margin: 10px 0 0 0; font-size: 12px;">
+          • Organize your workplace<br />
+          • Read theory<br />
+          • Join a union<br />
+          • Seize the means
+        </p>
+      </div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/d/db/Clippy-letter.PNG"
+        alt="Clippy"
+        class="clippy-img"
+      />
+    </div>
+
+    <script>
+      // CONSTRUCTION-TEMP: This script is part of the easter egg
+      // Play annoying alert sound (commented out for mercy)
+      // window.onload = function() {
+      //   alert("HELLO COMRADE! BONZI BUDDY HERE TO HELP YOU SEIZE THE MEMES OF PRODUCTION!");
+      // };
+
+      // Random sparkle cursor effect
+      document.addEventListener('mousemove', function (e) {
+        if (Math.random() > 0.9) {
+          const sparkle = document.createElement('div')
+          sparkle.textContent = '✨'
+          sparkle.style.position = 'fixed'
+          sparkle.style.left = e.pageX + 'px'
+          sparkle.style.top = e.pageY + 'px'
+          sparkle.style.pointerEvents = 'none'
+          sparkle.style.fontSize = '20px'
+          document.body.appendChild(sparkle)
+          setTimeout(() => sparkle.remove(), 1000)
+        }
+      })
+    </script>
+  </body>
+</html>
