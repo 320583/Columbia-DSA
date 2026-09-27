@@ -33,7 +33,7 @@ export const NAV_LINKS: SocialLink[] = [
     label: 'Shop',
   },
   {
-    href: '/donate',
+    href: 'https://donorbox.org/general-donations-429',
     label: 'Donate',
   },
   {
