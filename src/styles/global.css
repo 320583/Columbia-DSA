@@ -43,6 +43,14 @@
 }
 
 :root {
+  /* Pin color-scheme to the site's own light/dark toggle (data-theme)
+     instead of leaving it as the static "light dark" auto value. A static
+     value tells browsers this page supports both and to pick natively
+     based on OS preference for anything we don't explicitly style — which
+     in Safari can cause it to auto-dark-mode cross-origin iframe content
+     (e.g. the embedded Google Calendar) independently of our own toggle,
+     fighting with the dark:invert filter applied to it. */
+  color-scheme: light;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -55,6 +63,7 @@
 }
 
 [data-theme='dark'] {
+  color-scheme: dark;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);

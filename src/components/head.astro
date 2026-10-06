@@ -44,12 +44,18 @@ import Favicons from './favicons.astro'
   <!-- CONSTRUCTION-TEMP: Uncomment when site is ready for indexing -->
   <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
   <link rel="manifest" href="/site.webmanifest" />
+  <!--
+    TEMPORARILY-DISABLE-NEWS-FEED: the RSS feed (src/pages/_rss.xml.ts) is
+    disabled along with the rest of the blog/news content. Restore when
+    news content is ready to be public again.
+
   <link
     rel="alternate"
     type="application/rss+xml"
     title={SITE.title}
     href={new URL('rss.xml', Astro.site)}
   />
+  -->
 
   <Favicons />
   <ClientRouter />

@@ -1,4 +1,8 @@
 ---
+// TEMPORARILY-DISABLE-NEWS-FEED: this directory is prefixed with "_" (tags
+// -> _tags) so Astro excludes it from routing entirely, taking the tag
+// listing/post pages offline along with the rest of the blog/news content.
+// Rename back to "tags" to restore the routes.
 import Breadcrumbs from '@/components/breadcrumbs.astro'
 import Link from '@/components/link.astro'
 import PageHead from '@/components/page-head.astro'

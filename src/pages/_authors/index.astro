@@ -1,4 +1,8 @@
 ---
+// TEMPORARILY-DISABLE-NEWS-FEED: this directory is prefixed with "_"
+// (authors -> _authors) so Astro excludes it from routing entirely, taking
+// the author listing/profile pages offline along with the rest of the
+// blog/news content. Rename back to "authors" to restore the routes.
 import AuthorCard from '@/components/author-card.astro'
 import Breadcrumbs from '@/components/breadcrumbs.astro'
 import PageHead from '@/components/page-head.astro'

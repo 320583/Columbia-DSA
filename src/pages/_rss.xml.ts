@@ -1,3 +1,7 @@
+// TEMPORARILY-DISABLE-NEWS-FEED: this file is prefixed with "_" (rss.xml.ts
+// -> _rss.xml.ts) so Astro excludes it from routing entirely, taking
+// /rss.xml offline while blog/news content is kept out of public view.
+// Rename back to "rss.xml.ts" to restore the feed.
 import { SITE } from '@/consts'
 import rss from '@astrojs/rss'
 import type { APIContext } from 'astro'

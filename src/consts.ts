@@ -17,13 +17,16 @@ export const NAV_LINKS: SocialLink[] = [
     label: 'Home',
   },
   {
-    href: '/blog',
-    label: 'News',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSfHvwVl_9pAdQEpJ5smm_GWY9O-q3AQyx6C_orgZnQHTHZfiw/viewform',
+    label: 'Get Involved',
   },
-  {
-    href: '/calendar',
-    label: 'Calendar',
-  },
+  // TEMPORARILY-DISABLE-NEWS-FEED: hide the News nav link while blog/news
+  // content is kept out of public view (routes disabled in
+  // src/pages/_blog). Restore when news content is ready to be public again.
+  // {
+  //   href: '/blog',
+  //   label: 'News',
+  // },
   {
     href: '/resources',
     label: 'Resources',
@@ -60,10 +63,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
   //   href: 'https://discordapp.com',
   //   label: 'Discord',
   // },
-  {
-    href: '/rss.xml',
-    label: 'RSS',
-  },
+  // TEMPORARILY-DISABLE-NEWS-FEED: the RSS feed (src/pages/_rss.xml.ts) is
+  // disabled along with the rest of the blog/news content. Restore when
+  // news content is ready to be public again.
+  // {
+  //   href: '/rss.xml',
+  //   label: 'RSS',
+  // },
 ]
 
 export const ICON_MAP: IconMap = {
