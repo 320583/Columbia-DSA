@@ -251,27 +251,29 @@ columbia-dsa-2/
 
 ## Making Changes
 
-### Before Publishing
-When the site is under construction, several features are temporarily disabled:
-- Search engine indexing (robots.txt blocks crawlers)
-- Sitemap generation
-- Web archive crawling
+### Search Engine & Archive Indexing
+Search engines (Google, Bing, etc.) are allowed to crawl and index this
+site: `public/robots.txt` permits general crawlers, sitemap generation
+is on (`@astrojs/sitemap` in `astro.config.ts`), and the site-wide
+`noindex`/`nofollow` meta tags in `src/components/head.astro` have been
+removed.
 
-These are all marked with `CONSTRUCTION-TEMP` comments in the code. To find all temporary changes:
+Web archive crawlers (the Wayback Machine, `ia_archiver`, etc.) are
+intentionally still blocked, in both `public/robots.txt` and the
+`noarchive`/`nocache` meta tags in `src/components/head.astro`. This is
+a deliberate, ongoing choice, not a temporary construction-era one --
+leave it as-is unless that decision changes.
+
+### Remaining `CONSTRUCTION-TEMP` Items
+Any other temporarily-disabled features are marked with
+`CONSTRUCTION-TEMP` comments in the code. To find them:
 
 ```bash
 grep -r "CONSTRUCTION-TEMP" src/
 ```
 
-### Going Live Checklist
-When ready to make the site fully public:
-
-1. Search for `CONSTRUCTION-TEMP` in the codebase
-2. Uncomment sitemap generation in `astro.config.ts`
-3. Remove robots meta tags from `src/components/head.astro`
-4. Update `public/robots.txt` to allow crawlers
-5. Remove the construction banner from `src/layouts/layout.astro`
-6. Uncomment Discord link in `src/consts.ts` (when ready)
+As of now, the only one left is the Discord link in `src/consts.ts`,
+disabled until the chapter's Discord server is ready.
 
 ---
 

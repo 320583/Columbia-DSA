@@ -13,11 +13,16 @@ import Favicons from './favicons.astro'
   />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- CONSTRUCTION-TEMP: Remove when site is ready for indexing -->
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, nocache" />
-  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
-  <meta name="googlebot-news" content="noindex, nofollow" />
-  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+  <!--
+    Search engines are allowed to index this site (noindex/nofollow
+    removed). The directives below are intentionally kept: they don't
+    block indexing, they specifically discourage archiving/caching
+    (Google/Bing's cached-copy feature, and web archive crawlers like the
+    Wayback Machine -- see public/robots.txt for the actual crawl block).
+  -->
+  <meta name="robots" content="noarchive, nocache" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="bingbot" content="noarchive" />
   <meta name="ia_archiver" content="noarchive" />
   <meta name="archive" content="no" />
 
@@ -41,8 +46,7 @@ import Favicons from './favicons.astro'
     media="(prefers-color-scheme: light)"
   />
 
-  <!-- CONSTRUCTION-TEMP: Uncomment when site is ready for indexing -->
-  <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <!--
     TEMPORARILY-DISABLE-NEWS-FEED: the RSS feed (src/pages/_rss.xml.ts) is

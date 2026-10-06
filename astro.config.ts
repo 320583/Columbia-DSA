@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config'
 
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
-// CONSTRUCTION-TEMP: Uncomment when site is ready for indexing
-// import sitemap from '@astrojs/sitemap'
+import sitemap from '@astrojs/sitemap'
 import icon from 'astro-icon'
 
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
@@ -24,7 +23,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   output: 'static',
   site: 'https://columbiadsa.com',
-  integrations: [mdx(), react(), /* CONSTRUCTION-TEMP: sitemap(), */ icon()],
+  integrations: [mdx(), react(), sitemap(), icon()],
   vite: {
     plugins: [tailwindcss()],
   },

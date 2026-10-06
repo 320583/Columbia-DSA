@@ -73,38 +73,10 @@ import Layout from '@/layouts/layout.astro'
         <p class="mt-4 text-sm text-slate-950 dark:text-slate-100">Loading calendar…</p>
       </div>
 
-      <!--
-        The calendar should always look light, in every browser,
-        regardless of the site's own toggle or the OS setting. Google's
-        embed has no dark mode of its own, so in most browsers (Chrome,
-        Firefox, etc.) that's already the default with no CSS needed.
-        Safari is the one exception: it automatically applies its own
-        dark-adaptation to iframed content that declares `color-scheme:
-        light` whenever the OS is in dark mode, regardless of what we
-        want. The `@supports (hanging-punctuation: first) and (font:
-        -apple-system-body)` check below is a well-known Safari-only CSS
-        feature-detection hack, used here to counter-invert the iframe
-        back to light ONLY in Safari AND only when the OS is dark --
-        everywhere else this does nothing. Note: Safari's own adaptation
-        isn't a plain color invert, so this counter-invert doesn't
-        perfectly cancel it -- it may still look slightly dim/washed-out
-        in that one case (Safari + OS dark mode), but it stays in the
-        light family rather than flipping fully dark.
-      -->
-      <style is:global>
-        @supports (hanging-punctuation: first) and (font: -apple-system-body) {
-          @media (prefers-color-scheme: dark) {
-            .gcal-embed {
-              filter: invert(1) hue-rotate(180deg) saturate(1.1) contrast(0.9);
-            }
-          }
-        }
-      </style>
-
       <!-- Mobile: Agenda view -->
       <iframe
         src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FNew_York&amp;src=dsaofcolumbia%40gmail.com&amp;mode=AGENDA&amp;color=%23a79b8e"
-        class="gcal-embed block md:hidden w-full min-h-[600px] bg-white"
+        class="block md:hidden w-full min-h-[600px] bg-white filter transition duration-300 dark:invert dark:hue-rotate-[180deg] dark:saturate-[1.1] dark:contrast-[0.9]"
         style="border-radius: 20px; border: 0;"
         width="100%"
         height="600"
@@ -114,7 +86,7 @@ import Layout from '@/layouts/layout.astro'
       <!-- Desktop: Month view -->
       <iframe
         src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FNew_York&amp;src=dsaofcolumbia%40gmail.com&amp;mode=MONTH&amp;color=%23a79b8e"
-        class="gcal-embed hidden md:block w-full min-h-[600px] bg-white"
+        class="hidden md:block w-full min-h-[600px] bg-white filter transition duration-300 dark:invert dark:hue-rotate-[180deg] dark:saturate-[1.1] dark:contrast-[0.9]"
         style="border-radius: 20px; border: 0;"
         width="100%"
         height="600"
