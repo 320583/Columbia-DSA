@@ -1,0 +1,31 @@
+/*
+ * Theme: red-rose (example alternate theme, to show how little a swap takes).
+ * Warm paper background with DSA red accents. Light only.
+ * Activate it in ../theme.css.
+ */
+
+:root {
+  --font-sans: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  --font-heading: "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-weight-heading: 700;
+  --letter-spacing: 0;
+
+  --radius: 0;
+  --content-width: 46rem;
+
+  --background: #fbf6f1;
+  --foreground: #1f1a17;
+  --muted: #f0e6dd;
+  --muted-foreground: #6b5d54;
+  --border: #dccfc3;
+  --link: #b3122d;
+  --link-hover: #7d0c1f;
+  --accent: #b3122d;
+  --accent-foreground: #ffffff;
+  --calendar-filter: none;
+
+  --focus: #1d4ed8;
+
+  color-scheme: light;
+}

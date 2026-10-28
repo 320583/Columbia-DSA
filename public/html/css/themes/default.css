@@ -1,0 +1,53 @@
+/*
+ * Theme: default (black & white, follows the visitor's light/dark setting).
+ *
+ * A theme is ONLY a set of custom properties. layout.css never hard-codes a
+ * colour, font or size, so a new theme = a new file like this one.
+ * To switch themes, change the @import in ../theme.css.
+ */
+
+:root {
+  /* typography */
+  --font-sans: Geist, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  --font-heading: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-weight-heading: 500;
+  --letter-spacing: -0.01em;
+
+  /* shape & spacing */
+  --radius: 0.5rem;
+  --content-width: 48rem;
+
+  /* colour (light) */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
+  --link: var(--foreground);
+  --link-hover: var(--muted-foreground);
+  --accent: #0a0a0a;
+  --accent-foreground: #fafafa;
+  --calendar-filter: none; /* applied to the Google Calendar iframe */
+
+  --focus: #2563eb;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --muted: #262626;
+    --muted-foreground: #b3b3b3;
+    --border: #2b2b2b;
+    --accent: #fafafa;
+    --accent-foreground: #171717;
+    --calendar-filter: invert(1) hue-rotate(180deg) saturate(1.1) contrast(0.9);
+
+    --focus: #60a5fa;
+
+    color-scheme: dark;
+  }
+}
