@@ -42,7 +42,7 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* external-link marker (no JS needed) */
-a[href^="http"]::after { content: "\2197"; content: "\2197" / " (external link)"; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
+a[href^="http"]::after { content: "\2197"; content: "\2197" / " (external link, opens in a new tab)"; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);

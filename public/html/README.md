@@ -10,7 +10,13 @@ Served at `/html/`. Not linked from the live site and marked `noindex`.
 - To make a theme: copy `themes/default.css`, edit the values (and swap the `@font-face` for your own font), point `style.css` at it.
 
 ## Going live
-Remove the `<meta name="robots" content="noindex…">` line from each page, and move the folder's contents to the site root.
+This copy is served from `/html/`, so a few things are written with that path and will change when it replaces the site root:
+- Remove the `<meta name="robots" content="noindex…">` line from each page (it hides the pages from search engines).
+- `canonical`, `og:url`, `og:image`, the `sitemap.xml` URLs and `404.html`'s asset links all start with `https://columbiadsa.com/html/` (or `/html/`). Change them to the root.
+- `404.html` only takes effect from the site root (GitHub Pages ignores it in a subfolder).
+- Point `robots.txt` at `sitemap.xml`.
+
+External links open in a new tab (`target="_blank" rel="noopener noreferrer"`), and their ↗ marker is announced to screen readers as "(external link, opens in a new tab)".
 
 ## Cache busting
 GitHub Pages lets browsers cache CSS for ~10 minutes. When you change any CSS, bump the `?v=` number
