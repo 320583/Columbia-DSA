@@ -49,7 +49,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* external-link marker (no JS needed) */
-a[href^="http"]::after { content: "\2197" / ""; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
+a[href^="http"]::after { content: "\2197" / " (external link)"; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -99,17 +99,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   min-height: 2.75rem;
   padding: 0 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--muted-foreground);
   border-radius: var(--radius);
   background: var(--background);
+  color: var(--foreground);
   font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
   list-style: none;
 }
 .menu summary::-webkit-details-marker { display: none; }
-.menu summary::after { content: "\25BE"; margin-inline-start: 0.5rem; }
-.menu[open] summary::after { content: "\25B4"; }
+.menu summary::after { content: "\25BE" / ""; margin-inline-start: 0.5rem; }
+.menu[open] summary::after { content: "\25B4" / ""; }
 .menu summary:hover { background: var(--muted); }
 .menu nav {
   position: absolute;
