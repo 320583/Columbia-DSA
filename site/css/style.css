@@ -5,6 +5,6 @@
  * re-skin the whole site (or edit themes/default.css, or add your own).
  * layout.css holds structure only and reads everything from the theme.
  */
-@import url("themes/default.css?v=16");
-/* @import url("themes/red-rose.css?v=16"); */
-@import url("layout.css?v=16");
+@import url("themes/default.css?v=18");
+/* @import url("themes/red-rose.css?v=18"); */
+@import url("layout.css?v=18");

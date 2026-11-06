@@ -12,7 +12,8 @@ Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy
 ## What's in `site/`
 | Path | What it is |
 | --- | --- |
-| `index.html` | Home page: about text and the event calendar (a Google Calendar iframe) |
+| `index.html` | Home page: about text, the latest article and the event calendar (a Google Calendar iframe) |
+| `articles/index.html`, `articles/<slug>/index.html` | The article list and one folder per article |
 | `resources/index.html`, `resources/bylaws/index.html` | Resources and the chapter bylaws |
 | `contact/index.html` | Contact |
 | `404.html` | Not-found page (GitHub Pages serves it automatically) |
@@ -24,6 +25,12 @@ Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy
 
 ## Editing
 - **Text:** edit the HTML files directly.
+- **Publishing an article:**
+  1. Copy `articles/<an existing article>/` to a new folder named after the article, then edit the title, date (`<time datetime>`), description, canonical/`og:` URLs and the JSON-LD block in its `<head>`, and the text.
+  2. Add it to the top of the list in `articles/index.html`.
+  3. Point the "Latest Article" section in `index.html` at it.
+  4. Add its URL to `sitemap.xml`.
+  Within an article: paragraphs are `<p>`, titles of works are `<cite>`, the sources are a `<ul class="sources">`, and the credits sit in `<div class="credits">` just before the Sources heading.
 - **Adding a page:** copy an existing page, add it to the nav in every page's `<nav class="site-nav">`, and add its URL to `sitemap.xml`.
 - **Previewing locally:** from the repo root run `python3 -m http.server --directory site` and open http://localhost:8000.
 

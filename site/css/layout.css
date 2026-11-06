@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
  * Browsers without popover support never match :popover-open and keep the
  * inline row everywhere.
  */
-.site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin: 0; padding: 0; list-style: none; font-size: 0.9375rem; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1rem; margin: 0; padding: 0; list-style: none; font-size: 0.875rem; }
 .site-nav a { display: inline-block; padding-block: 0.6rem; color: var(--muted-foreground); text-decoration: none; }
 .site-nav a:hover { color: var(--foreground); text-decoration: underline; }
 .site-nav a[aria-current="page"] { color: var(--foreground); text-decoration: underline; text-underline-offset: 6px; }
@@ -201,6 +201,15 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 .prose ul { margin: 1.25rem 0; padding-left: 1.5rem; }
 .prose li { margin-top: 0.5rem; padding-left: 0.5rem; }
 .prose a { font-weight: 500; }
+
+/* articles */
+.prose header > h1 { margin: 0 0 0.25rem; }
+.prose header .meta { margin: 0 0 1.5rem; }
+.prose .sources { list-style: none; padding: 0; }
+.prose .sources li { padding: 0; overflow-wrap: anywhere; }
+.meta { color: var(--muted-foreground); font-size: 0.875rem; }
+.post-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; }
+.card h2, .card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; }
 
 /* breadcrumbs */
 .breadcrumbs { font-size: 0.875rem; color: var(--muted-foreground); }
