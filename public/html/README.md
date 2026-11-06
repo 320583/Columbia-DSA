@@ -1,6 +1,6 @@
 # Static preview of the Columbia DSA site
 
-Plain HTML + CSS, no build step, no JavaScript (the Google Calendar is an iframe).
+Plain HTML + CSS, no build step. The only JavaScript is `js/menu.js`, an optional enhancement for the mobile menu (Escape / click-away to close); everything works without it. The Google Calendar is an iframe.
 Served at `/html/`. Not linked from the live site and marked `noindex`.
 
 ## Switching themes

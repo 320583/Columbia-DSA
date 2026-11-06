@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav a:hover { color: var(--foreground); text-decoration: underline; }
 .site-nav a[aria-current="page"] { color: var(--foreground); text-decoration: underline; text-underline-offset: 6px; }
 
-/* mobile menu: a <details> dropdown, no JavaScript */
+/* mobile menu: a <details> dropdown (js/menu.js only adds Escape / click-away) */
 .menu { display: none; position: relative; }
 .menu summary {
   display: inline-flex;
@@ -123,9 +123,17 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--background);
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
 }
-.menu a { display: block; padding: 0.7rem 0.75rem; border-radius: var(--radius); color: var(--foreground); text-decoration: none; }
+.menu ul { display: grid; gap: 0.25rem; }
+.menu a {
+  display: block;
+  padding: 0.7rem 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  color: var(--foreground);
+  text-decoration: none;
+}
 .menu a:hover { background: var(--muted); }
-.menu a[aria-current="page"] { font-weight: 600; background: var(--muted); }
+.menu a[aria-current="page"] { font-weight: 600; box-shadow: inset 3px 0 0 var(--accent); }
+.menu a:focus-visible { outline-offset: -3px; }
 
 @media (max-width: 47.999rem) {
   .site-nav { display: none; }
