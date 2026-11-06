@@ -10,7 +10,7 @@
   <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -26,19 +26,17 @@
           <li><a href="contact/">Contact Us</a></li>
       </ul>
     </nav>
-    <details class="menu">
-      <summary>Menu</summary>
-      <nav aria-label="Main">
-        <ul>
+    <button class="menu-button" type="button" popovertarget="menu">Menu<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+    <nav class="menu-popover" id="menu" popover aria-label="Main">
+      <ul>
           <li><a href="" aria-current="page">Home</a></li>
           <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHvwVl_9pAdQEpJ5smm_GWY9O-q3AQyx6C_orgZnQHTHZfiw/viewform">Get Involved</a></li>
           <li><a href="resources/">Resources</a></li>
           <li><a href="https://shop.worxprinting.coop/collections/dsa-columbia">Shop</a></li>
           <li><a href="https://donorbox.org/general-donations-429">Donate</a></li>
           <li><a href="contact/">Contact Us</a></li>
-        </ul>
-      </nav>
-    </details>
+      </ul>
+    </nav>
   </header>
   <main id="main">
     <h1 class="visually-hidden">Columbia DSA</h1>
@@ -72,6 +70,5 @@
       </ul>
     </nav>
   </footer>
-  <script src="js/menu.js" defer></script>
 </body>
 </html>
