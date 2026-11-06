@@ -11,3 +11,7 @@ Served at `/html/`. Not linked from the live site and marked `noindex`.
 
 ## Going live
 Remove the `<meta name="robots" content="noindex…">` line from each page, and move the folder's contents to the site root.
+
+## Cache busting
+GitHub Pages lets browsers cache CSS for ~10 minutes. When you change any CSS, bump the `?v=` number
+in the `<link>` in each page and in the `@import`s in `css/style.css` and `css/theme.css` so visitors get the new styles at once.
