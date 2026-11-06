@@ -6,6 +6,14 @@
  * To switch themes, change the @import in ../theme.css.
  */
 
+/* Fonts belong to the theme: a theme that wants a different typeface ships it here. */
+@font-face {
+  font-family: "Geist";
+  src: url("../../fonts/GeistVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   /* typography */
   --font-sans: Geist, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
@@ -16,6 +24,7 @@
 
   /* shape & spacing */
   --radius: 0.5rem;
+  --radius-lg: 1.25rem; /* the calendar embed */
   --content-width: 48rem;
 
   /* colour (light) */

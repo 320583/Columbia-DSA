@@ -1,3 +1,10 @@
-/* The only stylesheet the pages link to. Theme first, then structure. */
-@import url("theme.css?v=6");
-@import url("layout.css?v=6");
+/*
+ * The only stylesheet the pages link to.
+ *
+ * THE THEME SWITCH: point the first @import at any file in themes/ to
+ * re-skin the whole site (or edit themes/default.css, or add your own).
+ * layout.css holds structure only and reads everything from the theme.
+ */
+@import url("themes/default.css?v=12");
+/* @import url("themes/red-rose.css?v=12"); */
+@import url("layout.css?v=12");

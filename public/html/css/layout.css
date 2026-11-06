@@ -3,16 +3,9 @@
  * from the theme's custom properties (see themes/default.css).
  */
 
-@font-face {
-  font-family: "Geist";
-  src: url("../fonts/GeistVF.woff2") format("woff2");
-  font-weight: 100 900;
-  font-display: swap;
-}
-
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -36,20 +29,20 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 .skip-link {
   position: absolute;
   inset-inline-start: 1rem;
-  top: -4rem;
+  top: 0.5rem;
   z-index: 20;
   padding: 0.5rem 1rem;
   background: var(--accent);
   color: var(--accent-foreground);
   border-radius: var(--radius);
+  translate: 0 -300%; /* off-screen at any text size */
 }
-.skip-link:focus { top: 0.5rem; }
+.skip-link:focus { translate: none; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* external-link marker (no JS needed) */
-a[href^="http"]::after { content: "\2197" / " (external link)"; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
+a[href^="http"]::after { content: "\2197"; content: "\2197" / " (external link)"; display: inline-block; margin: 0 0.2rem; font-size: 0.9em; opacity: 0.8; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -86,15 +79,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 .brand::after { content: none; }
 .brand img { width: 1.5rem; height: 1.5rem; }
-.site-header ul { margin: 0; padding: 0; list-style: none; }
-.menu-popover ul { display: grid; gap: 0.125rem; }
-.site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; font-size: 0.9375rem; }
+
+/*
+ * One <nav>, two presentations. It carries the `popover` attribute, so a
+ * small-screen "Menu" button can open it as a native dropdown (the browser
+ * handles Escape, click-away and focus return, no JavaScript). The attribute's
+ * "hidden" state is only a display rule, so when the popover is NOT open we
+ * restyle it as an ordinary inline row; wide screens just never show the button.
+ * Browsers without popover support never match :popover-open and keep the
+ * inline row everywhere.
+ */
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin: 0; padding: 0; list-style: none; font-size: 0.9375rem; }
 .site-nav a { display: inline-block; padding-block: 0.6rem; color: var(--muted-foreground); text-decoration: none; }
 .site-nav a:hover { color: var(--foreground); text-decoration: underline; }
 .site-nav a[aria-current="page"] { color: var(--foreground); text-decoration: underline; text-underline-offset: 6px; }
 
-/* mobile menu: native popover (no JavaScript). The browser provides Escape to close,
-   click-away, focus return and top-layer stacking. */
+.site-nav:not(:popover-open) {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
 .menu-button {
   display: none;
   align-items: center;
@@ -109,17 +121,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
+  anchor-name: --menu-button;
 }
 .menu-button:hover { background: var(--muted); }
 .menu-button .icon { width: 1rem; height: 1rem; transition: rotate 150ms; }
-.menu-button:has(+ .menu-popover:popover-open) .icon { rotate: 180deg; }
+.menu-button:has(+ .site-nav:popover-open) .icon { rotate: 180deg; }
 
-.menu-popover {
+/* the open dropdown (shadcn-style menu panel) */
+.site-nav:popover-open {
   position: fixed;
   inset: auto;
   top: 3.5rem;
-  inset-inline-end: max(1rem, calc((100% - var(--content-width)) / 2 + 1rem));
-  min-width: 13rem;
+  right: 1rem;
+  min-width: min(13rem, calc(100vw - 2rem));
   margin: 0;
   padding: 0.25rem;
   border: 1px solid var(--border);
@@ -127,12 +141,19 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--background);
   color: var(--foreground);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.12), 0 2px 4px -2px rgb(0 0 0 / 0.12);
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
   font-size: 0.875rem;
   transition: opacity 120ms, translate 120ms, display 120ms allow-discrete, overlay 120ms allow-discrete;
 }
-.menu-popover:not(:popover-open) { opacity: 0; translate: 0 -0.25rem; }
-@starting-style { .menu-popover:popover-open { opacity: 0; translate: 0 -0.25rem; } }
-.menu-popover a {
+@supports (top: anchor(bottom)) {
+  /* sit directly under the button however tall the header gets (text zoom, wrapping) */
+  .site-nav:popover-open { position-anchor: --menu-button; top: calc(anchor(bottom, 3rem) + 0.5rem); }
+}
+@starting-style { .site-nav:popover-open { opacity: 0; translate: 0 -0.25rem; } }
+.site-nav:popover-open ul { display: grid; gap: 0.125rem; font-size: inherit; }
+.site-nav:popover-open a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,22 +163,17 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
   text-decoration: none;
 }
-.menu-popover a:hover { background: var(--muted); }
-.menu-popover a:focus-visible { outline-offset: -2px; }
-.menu-popover a[aria-current="page"] { font-weight: 600; }
-.menu-popover a[aria-current="page"]::after { content: "\2713" / ""; }
+.site-nav:popover-open a:hover { background: var(--muted); }
+.site-nav:popover-open a:focus-visible { outline-offset: -2px; }
+.site-nav:popover-open a[aria-current="page"] { font-weight: 600; }
+.site-nav:popover-open a[aria-current="page"]::after { content: "\2713" / ""; }
 
 @media (max-width: 47.999rem) {
-  .site-nav { display: none; }
   .menu-button { display: inline-flex; }
+  .site-nav:not(:popover-open) { display: none; opacity: 0; translate: 0 -0.25rem; transition: opacity 120ms, translate 120ms, display 120ms allow-discrete, overlay 120ms allow-discrete; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .menu-popover, .menu-button .icon { transition: none; }
-}
-/* browsers without popover support: show the links inline instead */
-@supports not selector(:popover-open) {
-  .menu-button { display: none; }
-  .menu-popover { position: static; display: block; border: 0; box-shadow: none; opacity: 1; translate: none; }
+  .site-nav, .menu-button .icon { transition: none !important; }
 }
 
 /* ---------- main ---------- */
@@ -200,9 +216,6 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 .breadcrumbs { font-size: 0.875rem; color: var(--muted-foreground); }
 .breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .breadcrumbs li + li::before { content: "/"; margin-right: 0.5rem; }
-.breadcrumbs a { color: var(--muted-foreground); }
-.breadcrumbs a:hover { color: var(--foreground); }
-.breadcrumbs a::after { content: none; }
 .breadcrumbs [aria-current] { color: var(--foreground); }
 
 /* ---------- home ---------- */
@@ -214,7 +227,7 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
   border-radius: var(--radius);
 }
 .card img { flex: none; width: 6rem; height: 6rem; border-radius: var(--radius); }
-.card p { margin: 0 0 0.5rem; font-size: 0.875rem; line-height: 1.6; }
+.card p { margin: 0 0 0.75rem; line-height: 1.7; }
 .card p:last-child { margin-bottom: 0; }
 .card .lead { font-weight: 700; }
 .card .cta { font-weight: 600; }
@@ -226,7 +239,7 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
   position: relative;
   min-height: 600px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   background: #fff;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
 }
@@ -241,7 +254,7 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-.calendar iframe { position: relative; display: block; width: 100%; height: 600px; border: 0; border-radius: 20px; background: transparent; filter: var(--calendar-filter); }
+.calendar iframe { position: relative; display: block; width: 100%; height: 600px; border: 0; border-radius: var(--radius-lg); background: transparent; filter: var(--calendar-filter); }
 .calendar .calendar--month { display: none; }
 @media (min-width: 48rem) {
   .calendar .calendar--agenda { display: none; }
@@ -251,6 +264,13 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 @media (prefers-reduced-motion: reduce) { .calendar::before { animation: none; } }
 
 .calendar-note { margin: 0.75rem 0 0; font-size: 0.875rem; }
+
+/* ---------- table of contents (bylaws) ---------- */
+.toc { margin: 1.5rem 0; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); }
+.toc h2 { margin: 0 0 0.5rem; font-size: 1.125rem; }
+.toc ul { margin: 0; padding: 0; list-style: none; columns: 16rem; column-gap: 2rem; }
+.toc li { margin: 0; padding: 0; break-inside: avoid; }
+.toc a { display: inline-block; padding-block: 0.25rem; font-weight: 400; }
 
 /* ---------- footer ---------- */
 .site-footer {
@@ -266,23 +286,16 @@ main h2 { margin: 0 0 1rem; font-size: 1.5rem; }
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }
-.site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
-.site-footer a { color: var(--muted-foreground); }
-.site-footer a:hover { color: var(--foreground); }
-.site-footer a::after { content: none; }
 .site-footer p { margin: 0; }
-.site-footer a { display: inline-block; padding-block: 0.5rem; }
-
-@media (forced-colors: active) { .calendar iframe { filter: none; } }
-
-@media print { .site-header, .site-footer, .calendar { display: none; } }
-
-/* social links: icon + visible text label */
-.site-footer ul { gap: 0.25rem 1.25rem; flex-wrap: wrap; }
-.site-footer li a { display: inline-flex; align-items: center; gap: 0.4rem; }
+.site-footer ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+.site-footer a { display: inline-flex; align-items: center; gap: 0.4rem; padding-block: 0.5rem; }
 .icon { flex: none; width: 1.25rem; height: 1.25rem; }
 
-/* breadcrumbs and footer links: underline on hover/focus only */
-.breadcrumbs a, .site-footer a { text-decoration: none; }
+/* breadcrumb and footer links: plain, underlined on hover / keyboard focus */
+.breadcrumbs a, .site-footer a { color: var(--muted-foreground); text-decoration: none; }
 .breadcrumbs a:hover, .breadcrumbs a:focus-visible,
-.site-footer a:hover, .site-footer a:focus-visible { text-decoration: underline; }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--foreground); text-decoration: underline; }
+.breadcrumbs a::after, .site-footer a::after { content: none; }
+
+@media (forced-colors: active) { .calendar iframe { filter: none; } }
+@media print { .site-header, .site-footer, .calendar, .toc { display: none; } }
